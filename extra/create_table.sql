@@ -8,11 +8,8 @@ CREATE EXTERNAL TABLE trams (
     Lat DOUBLE,
     VehicleNumber STRING,
     Brigade STRING,
-    T TIMESTAMP
+    Time BIGINT
 )
 PARTITIONED BY (day STRING)
 STORED AS PARQUET
 LOCATION "/data/trams";
-
-ALTER TABLE trams SET SERDEPROPERTIES ("timestamp.formats"="yyyy-MM-dd'T'HH:mm:ss,yyyy-MM-dd'T'HH:mm:ss.SSS");
-
