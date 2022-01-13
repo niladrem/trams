@@ -771,7 +771,7 @@
                         </entry>
                         <entry>
                             <key>Timestamp Format</key>
-                            <value>yyyy-MM-dd'T'HH:mm:ss</value>
+                            <value>yyyy-MM-dd HH:mm:ss</value>
                         </entry>
                     </properties>
                     <state>ENABLED</state>
@@ -1706,6 +1706,7 @@
                                 <x>1496.0</x>
                                 <y>1808.0</y>
                             </position>
+                            <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
                             <state>STOPPED</state>
@@ -1931,7 +1932,7 @@
                                     </entry>
                                     <entry>
                                         <key>Conflict Resolution Strategy</key>
-                                        <value>ignore</value>
+                                        <value>replace</value>
                                     </entry>
                                     <entry>
                                         <key>Block Size</key>
@@ -2586,7 +2587,7 @@
                                     </entry>
                                     <entry>
                                         <key>filename</key>
-                                        <value>${uuid}.avro</value>
+                                        <value>${filename}.avro</value>
                                     </entry>
                                 </properties>
                                 <runDurationMillis>0</runDurationMillis>
@@ -3296,6 +3297,7 @@
                                 <x>2376.0</x>
                                 <y>1504.0</y>
                             </position>
+                            <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
                             <state>STOPPED</state>
@@ -3903,9 +3905,10 @@
                                 <x>1280.0</x>
                                 <y>960.0</y>
                             </position>
+                            <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>OUTPUT_PORT</type>
                         </outputPorts>
                         <processors>
@@ -4060,7 +4063,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>original</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.MergeRecord</type>
                         </processors>
@@ -4331,7 +4334,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_6</type>
                         </processors>
@@ -4533,7 +4536,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
                         </processors>
@@ -4619,7 +4622,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
@@ -4715,7 +4718,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>unmatched</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                         </processors>
@@ -4938,7 +4941,7 @@
                                     </entry>
                                     <entry>
                                         <key>From</key>
-                                        <value>Fast trams</value>
+                                        <value>fasttrams@pw.edu.pl</value>
                                     </entry>
                                     <entry>
                                         <key>To</key>
@@ -5560,9 +5563,10 @@
                                 <x>-1040.0</x>
                                 <y>1416.0</y>
                             </position>
+                            <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <type>OUTPUT_PORT</type>
                         </outputPorts>
                         <processors>
@@ -5657,7 +5661,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>unmatched</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                         </processors>
@@ -5859,7 +5863,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
                         </processors>
@@ -5933,7 +5937,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.ConvertRecord</type>
                         </processors>
@@ -5999,7 +6003,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>split</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.SplitJson</type>
                         </processors>
@@ -6162,7 +6166,7 @@
                                     </entry>
                                 </properties>
                                 <runDurationMillis>0</runDurationMillis>
-                                <schedulingPeriod>10 sec</schedulingPeriod>
+                                <schedulingPeriod>30 sec</schedulingPeriod>
                                 <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                                 <yieldDuration>1 sec</yieldDuration>
                             </config>
@@ -6172,7 +6176,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.GetHTTP</type>
                         </processors>
@@ -6475,7 +6479,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_6</type>
                         </processors>
@@ -6763,7 +6767,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>original</name>
                             </relationships>
-                            <state>STOPPED</state>
+                            <state>RUNNING</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.MergeContent</type>
                         </processors>
@@ -7013,5 +7017,5 @@
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>01/12/2022 20:41:04 UTC</timestamp>
+    <timestamp>01/13/2022 19:34:14 UTC</timestamp>
 </template>
