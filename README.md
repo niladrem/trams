@@ -7,8 +7,23 @@ Repozytorium grupy projektowej na przedmiot *BD3* na MiNI PW
 Źródło danych: https://api.um.warszawa.pl/
 
 - Nifi (pobieranie trams co 10s) -> Kafka -> Flink (deduplikacja) -> Kafka -> Nifi -> Hive
-- Nifi (pobieranie listy przystanków co kilka dni) -> Hive
-- Hive -> Pyspark (średnie prędkości cząstkowe) -> Hive
+- Nifi (pobieranie listy przystanków) -> Hive
+- Hive -> Pyspark (średnie prędkości cząstkowe) -> HBase
                               
+**Deduplikacja**: https://github.com/niladrem/trams_flink
+
+## Struktura repo
+
+### docs/
+Zawiera dokumentację i dokumentację z testów.
+
+### extra/
+Zawiera wszelkie skrypty pomocnicze m.in.: skrypty wywoływane przez Nifi, definicje tabel.
+
+### nifi/
+Zawiera template z flow.
+
+### pyspark/
+Zawiera skrypty pysparkowe.
 
 **Autorzy**: Anna Urbala, Bartosz Rożek

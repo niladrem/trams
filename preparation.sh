@@ -20,3 +20,10 @@ keytool -import -alias nificert -file dvcasha2.cer -keystore truststore.jks -sto
 # deploy joba flinkowego (config w extra)
 sudo /usr/local/flink/bin/start-cluster.sh
 sudo /usr/local/flink/bin/flink run -c pw.mini.DeduplicationJob /home/vagrant/trams/deduplication-1.0-SNAPSHOT.jar /home/vagrant/trams/config.properties
+
+# thrift do skryptów z użyciem happybase
+hbase thrift -p 9090
+
+# tworzenie tabel w hbase shell
+create 'tramsStats', 'infoTeam', 'infoTram', 'stats'
+create 'linesStats', 'dayStats', 'stats'

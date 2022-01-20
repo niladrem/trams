@@ -3715,6 +3715,218 @@
                     <variables/>
                 </processGroups>
                 <processGroups>
+                    <id>1b571be7-e32a-3b83-0000-000000000000</id>
+                    <parentGroupId>a1a0fedd-97c1-36ea-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1529.5486280361888</x>
+                        <y>1098.0598177197735</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <processors>
+                            <id>ed5dea1a-7ac8-391e-0000-000000000000</id>
+                            <parentGroupId>1b571be7-e32a-3b83-0000-000000000000</parentGroupId>
+                            <position>
+                                <x>864.0</x>
+                                <y>856.0</y>
+                            </position>
+                            <bundle>
+                                <artifact>nifi-standard-nar</artifact>
+                                <group>org.apache.nifi</group>
+                                <version>1.14.0</version>
+                            </bundle>
+                            <config>
+                                <bulletinLevel>WARN</bulletinLevel>
+                                <comments></comments>
+                                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                                <descriptors>
+                                    <entry>
+                                        <key>Command</key>
+                                        <value>
+                                            <name>Command</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Command Arguments</key>
+                                        <value>
+                                            <name>Command Arguments</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Batch Duration</key>
+                                        <value>
+                                            <name>Batch Duration</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Redirect Error Stream</key>
+                                        <value>
+                                            <name>Redirect Error Stream</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Working Directory</key>
+                                        <value>
+                                            <name>Working Directory</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Argument Delimiter</key>
+                                        <value>
+                                            <name>Argument Delimiter</name>
+                                        </value>
+                                    </entry>
+                                </descriptors>
+                                <executionNode>ALL</executionNode>
+                                <lossTolerant>false</lossTolerant>
+                                <penaltyDuration>30 sec</penaltyDuration>
+                                <properties>
+                                    <entry>
+                                        <key>Command</key>
+                                        <value>/usr/local/spark/bin/spark-submit</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Command Arguments</key>
+                                        <value>table1.py</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Batch Duration</key>
+                                    </entry>
+                                    <entry>
+                                        <key>Redirect Error Stream</key>
+                                        <value>true</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Working Directory</key>
+                                        <value>/home/vagrant/trams/spark</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Argument Delimiter</key>
+                                        <value> </value>
+                                    </entry>
+                                </properties>
+                                <runDurationMillis>0</runDurationMillis>
+                                <schedulingPeriod>0 0 12 1/1 * ? *</schedulingPeriod>
+                                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                                <yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Run tramsStats</name>
+                            <relationships>
+                                <autoTerminate>true</autoTerminate>
+                                <name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
+                        </processors>
+                        <processors>
+                            <id>f88b4135-f6a3-33ec-0000-000000000000</id>
+                            <parentGroupId>1b571be7-e32a-3b83-0000-000000000000</parentGroupId>
+                            <position>
+                                <x>1296.0</x>
+                                <y>856.0</y>
+                            </position>
+                            <bundle>
+                                <artifact>nifi-standard-nar</artifact>
+                                <group>org.apache.nifi</group>
+                                <version>1.14.0</version>
+                            </bundle>
+                            <config>
+                                <bulletinLevel>WARN</bulletinLevel>
+                                <comments></comments>
+                                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                                <descriptors>
+                                    <entry>
+                                        <key>Command</key>
+                                        <value>
+                                            <name>Command</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Command Arguments</key>
+                                        <value>
+                                            <name>Command Arguments</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Batch Duration</key>
+                                        <value>
+                                            <name>Batch Duration</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Redirect Error Stream</key>
+                                        <value>
+                                            <name>Redirect Error Stream</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Working Directory</key>
+                                        <value>
+                                            <name>Working Directory</name>
+                                        </value>
+                                    </entry>
+                                    <entry>
+                                        <key>Argument Delimiter</key>
+                                        <value>
+                                            <name>Argument Delimiter</name>
+                                        </value>
+                                    </entry>
+                                </descriptors>
+                                <executionNode>ALL</executionNode>
+                                <lossTolerant>false</lossTolerant>
+                                <penaltyDuration>30 sec</penaltyDuration>
+                                <properties>
+                                    <entry>
+                                        <key>Command</key>
+                                        <value>/usr/local/spark/bin/spark-submit</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Command Arguments</key>
+                                        <value>table2.py</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Batch Duration</key>
+                                    </entry>
+                                    <entry>
+                                        <key>Redirect Error Stream</key>
+                                        <value>true</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Working Directory</key>
+                                        <value>/home/vagrant/trams/spark</value>
+                                    </entry>
+                                    <entry>
+                                        <key>Argument Delimiter</key>
+                                        <value> </value>
+                                    </entry>
+                                </properties>
+                                <runDurationMillis>0</runDurationMillis>
+                                <schedulingPeriod>0 0 12 1/1 * ? *</schedulingPeriod>
+                                <schedulingStrategy>CRON_DRIVEN</schedulingStrategy>
+                                <yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Run linesStats</name>
+                            <relationships>
+                                <autoTerminate>true</autoTerminate>
+                                <name>success</name>
+                            </relationships>
+                            <state>RUN_ONCE</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
+                        </processors>
+                    </contents>
+                    <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+                    <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+                    <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+                    <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+                    <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+                    <name>spark</name>
+                    <variables/>
+                </processGroups>
+                <processGroups>
                     <id>20274ae8-780a-3efd-0000-000000000000</id>
                     <parentGroupId>a1a0fedd-97c1-36ea-0000-000000000000</parentGroupId>
                     <position>
@@ -3908,7 +4120,7 @@
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <type>OUTPUT_PORT</type>
                         </outputPorts>
                         <processors>
@@ -4063,7 +4275,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>original</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.MergeRecord</type>
                         </processors>
@@ -4334,7 +4546,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka_2_6</type>
                         </processors>
@@ -4536,7 +4748,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
                         </processors>
@@ -4622,7 +4834,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
                         </processors>
@@ -4718,7 +4930,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>unmatched</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                         </processors>
@@ -5566,7 +5778,7 @@
                             <comments></comments>
                             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                             <name>error</name>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <type>OUTPUT_PORT</type>
                         </outputPorts>
                         <processors>
@@ -5661,7 +5873,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>unmatched</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                         </processors>
@@ -5863,7 +6075,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
                         </processors>
@@ -5937,7 +6149,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.ConvertRecord</type>
                         </processors>
@@ -6003,7 +6215,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>split</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.SplitJson</type>
                         </processors>
@@ -6176,7 +6388,7 @@
                                 <autoTerminate>false</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.GetHTTP</type>
                         </processors>
@@ -6479,7 +6691,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>success</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_6</type>
                         </processors>
@@ -6767,7 +6979,7 @@
                                 <autoTerminate>true</autoTerminate>
                                 <name>original</name>
                             </relationships>
-                            <state>RUNNING</state>
+                            <state>STOPPED</state>
                             <style/>
                             <type>org.apache.nifi.processors.standard.MergeContent</type>
                         </processors>
@@ -7017,5 +7229,5 @@
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>01/13/2022 19:34:14 UTC</timestamp>
+    <timestamp>01/20/2022 20:54:01 UTC</timestamp>
 </template>
