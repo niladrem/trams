@@ -24,6 +24,6 @@ Zawiera wszelkie skrypty pomocnicze m.in.: skrypty wywoływane przez Nifi, defin
 Zawiera template z flow.
 
 ### pyspark/
-Zawiera skrypty pysparkowe.
+Zawiera skrypty pysparkowe oraz notebook z wizualizacjami.
 
 **Autorzy**: Anna Urbala, Bartosz Rożek
