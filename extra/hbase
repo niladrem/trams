@@ -1,0 +1,3 @@
+#wpisywane w konsoli hbase
+create 'tramsStats', 'infoTram', 'infoTeam', 'stats'
+create 'linesStats', 'stats', 'daystats'
